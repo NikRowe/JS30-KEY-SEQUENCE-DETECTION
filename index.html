@@ -6,7 +6,21 @@
   <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
 </head>
 <body>
+
 <script>
+  const pressed = []
+  const secretCode = 'lovetocode'
+
+  const decode = (e) => {
+    pressed.push(e.key)
+    pressed.splice(secretCode.length - 1, pressed.length - secretCode.length)
+
+    console.log(pressed)
+  }
+
+  window.addEventListener('keyup', decode)
+
 </script>
+
 </body>
 </html>
