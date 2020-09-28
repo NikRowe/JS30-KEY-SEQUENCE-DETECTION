@@ -13,9 +13,13 @@
 
   const decode = (e) => {
     pressed.push(e.key)
-    pressed.splice(secretCode.length - 1, pressed.length - secretCode.length)
+    pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length) // the - before secertCode.length allows the splice to go backwards replacing the first item in the array not the last. 
 
-    console.log(pressed)
+    let joinedPressed = pressed.join('')
+    if(joinedPressed === secretCode) {
+      console.log(`Congratulations the answer was: %c ${joinedPressed}`, 
+        'color: teal; font-size:15px')
+    }
   }
 
   window.addEventListener('keyup', decode)
