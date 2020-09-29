@@ -10,9 +10,9 @@ For my bonus: <br>
     <li>Upon getting 100% on the quiz, a word puzzle is displayed within the Console.</li>
     <li>If you can guess the super secret code, you have decoded the cypher! </li>
 </ul>
-I had to change the tutorial logic a bit for the quiz values; I didn't want the user to have to get 100% on the first try, or have to go back and re-select the correct answers in order to trigger the secret code. That's not intuitive.  
+I had to change the tutorial logic a bit for the quiz values; I didn't want the user to have to get 100% on the first try, or have to go back and re-select the correct answers in the precise order to trigger the secret code. That's not intuitive.  
 <br>
-I wanted the desired effect to be such that the user can change answers and as long as the secretCode was in
+I wanted the desired effect to be such that the user can change answers and as long as the secretCode was in the array they would trigger the code. I used some simple CSS styling to communicate to the user that they have the correct/incorrect answer before moving on. 
 
 
 <a href="">Demo</a>
