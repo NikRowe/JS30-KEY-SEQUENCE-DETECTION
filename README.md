@@ -17,5 +17,6 @@ I wanted the desired effect to be such that the user can change answers and as l
 <p>
 <a href="https://nikrowedevjs30-key-sequence-detection.netlify.app/">Demo</a>
 </p>
-<span>Resource:</span>
+<span>Resources:</span>
 <a href="https://www.gavsblog.com/blog/find-single-or-array-of-values-in-javascript-array-using-includes">gavsblog.com</a>
+<a href="https://www.geeksforgeeks.org/javascript-quiz-set-1/">GeeksforGeeks Quiz</a>
