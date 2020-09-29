@@ -31,6 +31,7 @@ function decode(e) {
         if (joinedPressed === secretCode) {
             console.log(`Congratulations the answer was: %c ${joinedPressed}`,
                 'color: teal; font-size:15px')
+            cornify_add();
         }
     } else {
         if (this.value === 'N' || this.value === 'I' || this.value === 'K') {
