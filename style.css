@@ -1,0 +1,22 @@
+body {
+    margin: auto;
+    max-width: 800px;
+}
+
+.content {
+    background: linear-gradient(135deg, #008080, #35b5ac, #89d5d2 100%);
+    border-radius: 25px;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+ul {
+    list-style: none;
+}
+
+.correct:checked + label {
+    background-color: green;
+}
+input:checked + label {
+    background-color: red;
+}
