@@ -10,95 +10,158 @@
 <body>
 
   <style>
+    body {
+      margin: auto;
+      max-width: 800px;
+    }
+
+    .content {
+      background: linear-gradient(135deg, #008080, #35B5AC, #89D5D2 100%);
+      border-radius: 25px;
+      padding: 1rem;
+      margin: 1rem;
+    }
+
     ul {
       list-style: none;
     }
+
+    .correct:checked+label {
+      background-color: green;
+    }
+    input:checked+label {
+      background-color: red
+    }
+
   </style>
 
-  <p>1. What is the HTML tag under which one can write the JavaScript code?</p>
-  <ul class='answers'>
-    <li>
-      <input type='radio' id='1a' name='a1' value='javascript'>
-      <label for='1a'>&lt javascript &gt</label>
-    </li>
-    <li>
-      <input type='radio' id='1b' name='a1' value='scripted'>
-      <label for='1b'>&lt scripted &gt</label>
-    </li>
-    <li>
-      <input type='radio' id='1c' name='a1' value='N'>
-      <label for='1c'>&lt script &gt</label>
-    </li>
-    <li>
-      <input type='radio' id='1d' name='a1' value='js'>
-      <label for='1d'>&lt js &gt</label>
-    </li>
-  </ul>
+  <div class='content'>
+    <p>1. What is the HTML tag under which one can write the JavaScript code?</p>
+    <ul class='answers'>
+      <li>
+        <input type='radio' id='1: A' name='a1' value='wrong'>
+        <label for='1a'>&lt javascript &gt</label>
+      </li>
+      <li>
+        <input type='radio' id='1: B' name='a1' value='wrong'>
+        <label for='1b'>&lt scripted &gt</label>
+      </li>
+      <li>
+        <input type='radio' id='1: C' name='a1' value='N'>
+        <label for='1c'>&lt script &gt</label>
+      </li>
+      <li>
+        <input type='radio' id='1: D' name='a1' value='wrong'>
+        <label for='1d'>&lt js &gt</label>
+      </li>
+    </ul>
 
-  <p>2. Choose the correct JavaScript syntax to change the content of the following HTML code.</p>
-  <ul class='answers'>
-    <li>
-      <input type='radio' id='2a' name='a2' value='wrong'>
-      <label for='2a'>document.getElement("geek").innerHTML="I am a Geek";</label>
-    </li>
-    <li>
-      <input type='radio' id='2b' name='a2' value='I'>
-      <label for='2b'>document.getElementById("geek").innerHTML="I am a Geek";</label>
-    </li>
-    <li>
-      <input type='radio' id='2c' name='a2' value='wrong'>
-      <label for='2c'>document.getId("geek")="I am a Geek";</label>
-    </li>
-    <li>
-      <input type='radio' id='2d' name='a2' value='wrong'>
-      <label for='2d'>document.getElementById("geek").innerHTML=I am a Geek;</label>
-    </li>
-  </ul>
+    <p>2. Choose the correct JavaScript syntax to change the content of the following HTML code.</p>
+    <ul class='answers'>
+      <li>
+        <input type='radio' id='2: A' name='a2' value='wrong'>
+        <label for='2a'>document.getElement("geek").innerHTML="I am a Geek";</label>
+      </li>
+      <li>
+        <input type='radio' id='2: B' name='a2' value='I'>
+        <label for='2b'>document.getElementById("geek").innerHTML="I am a Geek";</label>
+      </li>
+      <li>
+        <input type='radio' id='2: C' name='a2' value='wrong'>
+        <label for='2c'>document.getId("geek")="I am a Geek";</label>
+      </li>
+      <li>
+        <input type='radio' id='2: D' name='a2' value='wrong'>
+        <label for='2d'>document.getElementById("geek").innerHTML=I am a Geek;</label>
+      </li>
+    </ul>
 
-  <p>3. Which of the following is the correct syntax to display "NikRoweDev" in an alert box using JavaScript?</p>
-  <ul class='answers'>
-    <li>
-      <input type='radio' id='3a' name='a3' value='wrong'>
-      <label for='3a'>alertbox("NikRoweDev")</label>
-    </li>
-    <li>
-      <input type='radio' id='3b' name='a3' value='wrong'>
-      <label for='3b'>msg("NikRoweDev")</label>
-    </li>
-    <li>
-      <input type='radio' id='3c' name='a3' value='wrong'>
-      <label for='3c'>msgbox("NikRoweDev")</label>
-    </li>
-    <li>
-      <input type='radio' id='3d' name='a3' value='K'>
-      <label for='3d'>alert("NikRoweDev")</label>
-    </li>
-  </ul>
+    <p>3. Which of the following is the correct syntax to display "NikRoweDev" in an alert box using JavaScript?</p>
+    <ul class='answers'>
+      <li>
+        <input type='radio' id='3: A' name='a3' value='wrong'>
+        <label for='3a'>alertbox("NikRoweDev")</label>
+      </li>
+      <li>
+        <input type='radio' id='3: B' name='a3' value='wrong'>
+        <label for='3b'>msg("NikRoweDev")</label>
+      </li>
+      <li>
+        <input type='radio' id='3: C' name='a3' value='wrong'>
+        <label for='3c'>msgbox("NikRoweDev")</label>
+      </li>
+      <li>
+        <input type='radio' id='3: D' name='a3' value='K'>
+        <label for='3d'>alert("NikRoweDev")</label>
+      </li>
+    </ul>
+  </div>
 
   <script>
-    function log() {
-      console.log(this.value)
-    }
     const inputs = document.querySelectorAll('.answers input')
+    const answers = () => inputs.forEach(input => {
+      if (input.value != 'wrong') {
+        console.log(`%c ${input.id}`, 'color: teal; font-size:15px')
+      }
+    })
 
-    inputs.forEach(input => input.addEventListener('click', log))
 
+    function log(joinedPressed) {
+      console.log('Congratulations on passing the quiz! The answers: ')
+      answers()
+      console.log('Can you guess the super secret code?')
+      console.log(`%c    l_vet_co_e    `,
+        'color: teal; font-size:15px')
+      console.log('type it out on your keyboard to find out')
+    }
 
     const pressed = []
     const secretCode = 'lovetocode'
+    const secretCode2 = ['N', 'I', 'K']
 
-    const decode = (e) => {
-      pressed.push(e.key)
-      pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length) // the - before secertCode.length allows the splice to go backwards replacing the first item in the array not the last. 
+    let correct = false
 
-      let joinedPressed = pressed.join('')
-      if (joinedPressed === secretCode) {
-        console.log(`Congratulations the answer was: %c ${joinedPressed}`,
-          'color: teal; font-size:15px')
+    function decode(e) {
+      // if key is pressed put values into array and remove excess over length of secret code // 
+      if (e.key) {
+        pressed.push(e.key)
+        pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length); // the - before secertCode.length allows the splice to go backwards replacing the first item in the array not the last. 
+
+        let joinedPressed = pressed.join('')
+        if (joinedPressed === secretCode) {
+          console.log(`Congratulations the answer was: %c ${joinedPressed}`,
+            'color: teal; font-size:15px')
+        }
+      } else {
+        if (this.value === 'N' || this.value === 'I' || this.value === 'K') {
+          correct = true
+        } else {
+          correct = false
+        }
+
+        if (correct) {
+          this.classList.add('correct')
+        }
+        
+        pressed.push(this.value)
+        // pressed.splice(-secretCode2.length - 1, pressed.length - secretCode2.length)
+
+        let joinedPressed = pressed.join('')
+        if (secretCode2.every(i => pressed.includes(i))) {
+          log(joinedPressed)
+        }
       }
     }
 
+    // const inputsArr = Array.from(inputs)
+    // function correct() {
+    //   inputsArr.map(input =>{
+    //     console.log(this.value)
+    //   })
+    // }
+
     window.addEventListener('keyup', decode)
+    inputs.forEach(input => input.addEventListener('click', decode))
 
   </script>
 
