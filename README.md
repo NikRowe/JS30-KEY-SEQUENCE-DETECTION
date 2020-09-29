@@ -1,7 +1,7 @@
 # JS30 Key Sequence Detection
 Exercise 12 in WesBos' JavaScript30 tutorials. 
 
-This one was a blast! Maybe because you were creating secret codes and as if some sort of 007 spy, or maybe because it felt nostalgic to the days of Super Mario & Goldeneye. 
+This one was a blast! Maybe because you were creating secret codes and as if some sort of 007 spy, or maybe because it felt nostalgic to the days of Super Mario & GoldenEye. 
 
 This really reinforced looking at object and event properties to find parts I could use to manipulate how I'd like. <br>
 For my bonus: <br> 
